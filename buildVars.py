@@ -23,7 +23,7 @@ addon_info = {
 	"addon_summary": _("Kill Process"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""Compelmento para matar el proceso de la ventana que tenga el foco."""),
+	"addon_description": _("""Complemento para matar el proceso de la ventana que tenga el foco."""),
 	# version
 	"addon_version": "1.1.1",
 	# Author(s)
