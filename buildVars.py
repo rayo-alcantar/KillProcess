@@ -25,13 +25,13 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""Compelmento para matar el proceso de la ventana que tenga el foco."""),
 	# version
-	"addon_version": "1.1",
+	"addon_version": "1.1.1",
 	# Author(s)
 	"addon_author": "Ángel Alcántar <rayoalcantar@gmail.com>",
 	# URL for the add-on documentation support
 	"addon_url": None,
 	# URL for the add-on repository where the source code can be found
-	"addon_sourceURL": None,
+	"addon_sourceURL": "https://github.com/rayo-alcantar/killprocess",
 	# Documentation file name
 	"addon_docFileName": "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)

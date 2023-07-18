@@ -41,7 +41,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         res = p.kill()
         if res == 0:
             # Translators: Announced when current process cannot be killed.
-            ui.message(_("Cannot kill the current process"))
+            ui.message(_("No se puede matar el proceso actuals"))
             return
         else:
             tones.beep(90, 80)
