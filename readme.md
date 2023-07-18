@@ -8,6 +8,10 @@ Para matar el proceso de la ventana actual, presiona 'Windows + F4' (modificable
 
 ## Registro de cambios
 
+### versión 1.1.2
+
+- Se tradujo la documentación al inglés.
+
 ### Versión 1.1.1
 
 - Cambios internos, correcciones de mensajes y palabras mal escritas.
@@ -22,7 +26,7 @@ Para matar el proceso de la ventana actual, presiona 'Windows + F4' (modificable
 
 ## Versión
 
-1.1.1
+1.1.2
 
 ## Créditos
 
