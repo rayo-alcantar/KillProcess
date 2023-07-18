@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""Complemento para matar el proceso de la ventana que tenga el foco."""),
 	# version
-	"addon_version": "1.1.1",
+	"addon_version": "1.1.2",
 	# Author(s)
 	"addon_author": "Ángel Alcántar <rayoalcantar@gmail.com>",
 	# URL for the add-on documentation support

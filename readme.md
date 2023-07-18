@@ -11,6 +11,7 @@ Para matar el proceso de la ventana actual, presiona 'Windows + F4' (modificable
 ### versión 1.1.2
 
 - Se tradujo la documentación al inglés.
+- Gracias a Héctor Benítez se añadió una funcionalidad para evitar que se mate el proceso de NVDA y explorer.exe.
 
 ### Versión 1.1.1
 

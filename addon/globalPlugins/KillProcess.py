@@ -37,11 +37,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         category = "Kill process"
     )
     def script_killProcess(self, gesture):
-        p = process()
-        res = p.kill()
-        if res == 0:
-            # Translators: Announced when current process cannot be killed.
-            ui.message(_("No se puede matar el proceso actuals"))
+        if api.getFocusObject().appModule.productName in ["NVDA", "explorer"]: # Comprobación en modo lista por si se quieren añadir otros procesos críticos que no se desean matar
+            ui.message(_("Tiene enfocado un proceso restringido"))
             return
         else:
-            tones.beep(90, 80)
+            p = process()
+            res = p.kill()
+            if res == 0:
+                # Translators: Announced when current process cannot be killed.
+                ui.message(_("No se puede matar el proceso actual"))
+                return
+            else:
+                tones.beep(90, 80)
