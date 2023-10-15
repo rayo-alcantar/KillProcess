@@ -51,7 +51,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killProcess(self, gesture):  
         # Verificamos si el proceso enfocado actualmente es un proceso restringido
-        if api.getFocusObject().appModule.productName in ["NVDA", "explorer"]:  
+        if api.getFocusObject().appModule.appName in ["NVDA", "explorer"]:  
             # Notificamos al usuario que está enfocando un proceso restringido
             ui.message(_("Tiene enfocado un proceso restringido"))  
             return
