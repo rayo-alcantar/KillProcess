@@ -16,6 +16,9 @@ import ui
 import tones
 from scriptHandler import script
 import globalPluginHandler
+import os
+import appModuleHandler
+import subprocess
 
 # Definimos la clase Process
 class process:
@@ -51,7 +54,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killProcess(self, gesture):  
         # Verificamos si el proceso enfocado actualmente es un proceso restringido
-        if api.getFocusObject().appModule.productName in ["NVDA", "explorer"]:  
+        if api.getFocusObject().appModule.appName in ["NVDA", "explorer"]:  
             # Notificamos al usuario que está enfocando un proceso restringido
             ui.message(_("Tiene enfocado un proceso restringido"))  
             return
@@ -68,3 +71,50 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             else:
                 # Si el proceso fue matado exitosamente, hacemos un sonido de pitido
                 tones.beep(90, 80) 
+
+    # Definimos un script que mata todos los procesos bloqueados cuando se presiona la combinación de teclas 'Windows + Control + F4'
+    @script(
+        # Descripción del comando del teclado que mata los procesos bloqueados
+        description=_("Mata los procesos bloqueados (aplicaciones que no responden)."),
+        # La combinación de teclas que dispara el script
+        gesture="kb:windows+control+f4",
+        # La categoría del script (para propósitos de organización)
+        category = "Kill process"
+    )
+    # El método que se llama cuando se presiona la combinación de teclas
+    def script_killUnresponsiveProcesses(self, gesture):  
+        # Ejecutamos el comando tasklist del sistema operativo
+        unresponsiveProcesses = os.popen(r'tasklist /fi "STATUS eq not responding" /fo csv /nh').readlines()
+        # Para cada proceso encontrado
+        for p in unresponsiveProcesses:
+            try:
+                # Obtenemos el ID del proceso
+                pid = int(p.split('","')[1])
+            except IndexError:
+                # El comando no devolvió ningún proceso. Se informa al usuario y se termina el script.
+                ui.message(_("No se han encontrado procesos bloqueados"))
+                return
+            # Obtenemos el nombre del proceso
+            try:
+                appModule = appModuleHandler.getAppModuleFromProcessID(pid)
+                try:
+                    appName = appModule.productName
+                except:
+                    appName = appModule.appName
+                finally:
+                    if not appName: appName = p.split('","')[0][1:]
+            except:
+                appName = ""
+            # Ejecutamos el comando taskkill del sistema operativo
+            command = "taskkill /f /pid {}".format(pid)
+            si = subprocess.STARTUPINFO()
+            si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+            sp = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=si, text=True)
+            stdout, stderr = sp.communicate()
+            # Informamos al usuario del resultado
+            if stderr:
+                # No se pudo cerrar el proceso, se iforma del mensaje de error.
+                ui.message("{}\n{}".format(appName, stderr))
+            else:
+                # El proceso se ha cerrado correctamente
+                ui.message(_("{} se ha cerrado correctamente".format(appName)))
