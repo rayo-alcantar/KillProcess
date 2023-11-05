@@ -20,6 +20,7 @@ try:
     import os
     import appModuleHandler
     import subprocess
+#importamos el "logHandler" para poder lanzar el error al log.
     from logHandler import log
 except ImportError as e:
     log.error(f"error importing libraries. error details: {e}")
