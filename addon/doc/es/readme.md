@@ -8,8 +8,7 @@ Para matar el proceso de la ventana actual, presiona 'Windows + F4' (modificable
 
 ## Registro de cambios
 ### Versión 1.2
-
-- gracias a Javi domínguez se añadió funcionalidad para que NVDA pueda matar procesos bloqueados, así como cambios internos.
+- Gracias a Javi Domínguez se añadió funcionalidad para que NVDA pueda matar procesos bloqueados, así como cambios internos.
 
 ### versión 1.1.2
 

@@ -20,7 +20,7 @@ try:
     import os
     import appModuleHandler
     import subprocess
-from logHandler import log
+    from logHandler import log
 except ImportError as e:
     log.error(f"error importing libraries. error details: {e}")
 
