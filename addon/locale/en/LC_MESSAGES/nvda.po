@@ -18,45 +18,49 @@ msgstr ""
 "X-Generator: Poedit 3.4.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#. Descripción del comando del teclado que mata el proceso enfocado actualmente
+#. Descripción del comando del teclado que mata el proceso enfocado
+#. actualmente
 #: addon\globalPlugins\KillProcess.py:48
 msgid "Mata el proceso enfocado actualmente."
-msgstr ""
+msgstr "Kills the currently focused process."
 
 #. Notificamos al usuario que está enfocando un proceso restringido
 #: addon\globalPlugins\KillProcess.py:59
 msgid "Tiene enfocado un proceso restringido"
-msgstr ""
+msgstr "It has a restricted process focused"
 
 #. Notificamos al usuario que el proceso no pudo ser matado
 #: addon\globalPlugins\KillProcess.py:69
 msgid "No se puede matar el proceso actual"
-msgstr ""
+msgstr "Can't kill current process"
 
 #. Descripción del comando del teclado que mata los procesos bloqueados
 #: addon\globalPlugins\KillProcess.py:78
 msgid "Mata los procesos bloqueados (aplicaciones que no responden)."
-msgstr ""
+msgstr "Kills blocked processes (unresponsive applications)."
 
-#. El comando no devolvió ningún proceso. Se informa al usuario y se termina el script.
+#. El comando no devolvió ningún proceso. Se informa al usuario y se termina
+#. el script.
 #: addon\globalPlugins\KillProcess.py:95
 msgid "No se han encontrado procesos bloqueados"
-msgstr ""
+msgstr "No blocked processes found"
 
 #. El proceso se ha cerrado correctamente
 #: addon\globalPlugins\KillProcess.py:120
 msgid "{} se ha cerrado correctamente"
-msgstr ""
+msgstr "{} has been closed successfully"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
-#. to be shown on installation and add-on information found in Add-ons Manager.
+#. to be shown on installation and add-on information found in Add-ons
+#. Manager.
 #: buildVars.py:23
 msgid "Kill Process"
-msgstr ""
+msgstr "Kill Process"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on
+#. information from add-ons manager
 #: buildVars.py:26
 msgid "Complemento para matar el proceso de la ventana que tenga el foco."
-msgstr ""
+msgstr "Plugin to kill the process of the window that has focus."
