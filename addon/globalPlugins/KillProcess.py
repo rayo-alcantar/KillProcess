@@ -6,19 +6,24 @@
 """
 Este complemento de NVDA proporciona un atajo de teclado para eliminar el proceso enfocado actualmente.
 Presione 'Windows + F4' para eliminar el proceso de la ventana actual.This add-on is based on code from the original "winWizard.py" NVDA add-on.
-Código original del compelmento de Oriol Gómez.
+Código original del complemento de Oriol Gómez.
 """
 
-# Importamos los módulos requeridos
-import api
-import winKernel
-import ui
-import tones
-from scriptHandler import script
-import globalPluginHandler
-import os
-import appModuleHandler
-import subprocess
+#importamos los módulos requeridos y los metemos en un bloque try-except por si alguno no se puede usar, o no esté een el dispositivo.
+try:
+    import api
+    import winKernel
+    import ui
+    import tones
+    from scriptHandler import script
+    import globalPluginHandler
+    import os
+    import appModuleHandler
+    import subprocess
+#importamos el "logHandler" para poder lanzar el error al log.
+    from logHandler import log
+except ImportError as e:
+    log.error(f"error importing libraries. error details: {e}")
 
 # Definimos la clase Process
 class process:
@@ -106,7 +111,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             except:
                 appName = ""
             # Ejecutamos el comando taskkill del sistema operativo
-            command = "taskkill /f /pid {}".format(pid)
+            command = f"taskkill /f /pid{pid} "
             si = subprocess.STARTUPINFO()
             si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
             sp = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=si, text=True)
@@ -114,7 +119,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             # Informamos al usuario del resultado
             if stderr:
                 # No se pudo cerrar el proceso, se iforma del mensaje de error.
-                ui.message("{}\n{}".format(appName, stderr))
+                ui.message(f"{appName}\n{stderr}")
             else:
                 # El proceso se ha cerrado correctamente
-                ui.message(_("{} se ha cerrado correctamente".format(appName)))
+                ui.message(_(f"{appName} se ha cerrado correctamente"))
