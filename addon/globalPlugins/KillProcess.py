@@ -49,7 +49,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         # La combinación de teclas que dispara el script
         gesture="kb:windows+f4",
         # La categoría del script (para propósitos de organización)
-        category = "Kill process"
+        category = _("Kill process")
     )
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killProcess(self, gesture):  
@@ -79,7 +79,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         # La combinación de teclas que dispara el script
         gesture="kb:windows+control+f4",
         # La categoría del script (para propósitos de organización)
-        category = "Kill process"
+        category = _("Kill process")
     )
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killUnresponsiveProcesses(self, gesture):  

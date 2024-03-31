@@ -7,6 +7,11 @@ Kill Process es un complemento para NVDA que proporciona un atajo de teclado par
 Para matar el proceso de la ventana actual, presiona 'Windows + F4' (modificable desde la categoría kill process en gestos de entrada).
 
 ## Registro de cambios
+
+### Versión 2.1
+
+Se añaden cadenas de traducción
+
 ### Versión 1.2
 - Gracias a Javi Domínguez se añadió funcionalidad para que NVDA pueda matar procesos bloqueados, así como cambios internos.
 

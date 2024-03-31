@@ -1,7 +1,0 @@
-/c/Users/angel/.gnupg/pubring.kbx
----------------------------------
-sec   rsa4096/B934A934466498D3 2023-07-18 [SC]
-      8BCE46E0905360644598FEFDB934A934466498D3
-uid                 [ultimate] ángel Alcantar <rayoalcantar@gmail.com>
-ssb   rsa4096/85A4CD502D89245C 2023-07-18 [E]
-
