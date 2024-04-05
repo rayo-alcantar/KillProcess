@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: killProcess 1.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2023-12-04 09:42-0600\n"
-"PO-Revision-Date: 2023-12-04 11:25-0600\n"
+"PO-Revision-Date: 2024-04-05 10:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Descripción del comando del teclado que mata el proceso enfocado
@@ -27,7 +27,7 @@ msgstr "Kills the currently focused process."
 #. Notificamos al usuario que está enfocando un proceso restringido
 #: addon\globalPlugins\KillProcess.py:59
 msgid "Tiene enfocado un proceso restringido"
-msgstr "It has a restricted process focused"
+msgstr "A restricted process is focused"
 
 #. Notificamos al usuario que el proceso no pudo ser matado
 #: addon\globalPlugins\KillProcess.py:69
