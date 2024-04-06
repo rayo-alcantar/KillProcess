@@ -29,7 +29,7 @@ addon_info = {
 	# Author(s)
 	"addon_author": "Angel Alcántar <rayoalcantar@gmail.com>",
 	# URL for the add-on documentation support
-	"addon_url": None,
+	"addon_url": "https://github.com/rayo-alcantar/killprocess",
 	# URL for the add-on repository where the source code can be found
 	"addon_sourceURL": "https://github.com/rayo-alcantar/killprocess",
 	# Documentation file name
