@@ -8,6 +8,10 @@ Para matar el proceso de la ventana actual, presiona 'Windows + F4' (modificable
 
 ## Registro de cambios
 
+### Versión 2.1.1
+
+* Se arreglan algunas traducciones (inglés, francés e Italiano, gracias a CyrilleB79.
+
 ### Versión 2.1
 
 Se añaden cadenas de traducción
