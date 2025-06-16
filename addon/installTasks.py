@@ -1,8 +1,8 @@
 ﻿# -*- coding: utf-8 -*-
-# TimeCalculator es un complemento para calcular el tiempo.
+# killProcess es un coplemento para matar la ventana que tenga el foco.
 # Este archivo está cubierto por la Licencia Pública General de GNU.
 # Consulta el archivo COPYING para más detalles.
-# Última actualización 2024
+# Última actualización 2025
 # Derechos de autor (C) 2024 Ángel Alcántar <rayoalcantar@gmail.com>
 
 import addonHandler
@@ -22,7 +22,7 @@ class donate:
         title = _("Por favor, dona")
         
         # Translators: The text of the donate dialog
-        message = _("""TimeCalculator - complemento gratuito para NVDA.
+        message = _("""killprocess - complemento gratuito para NVDA.
 Puedes hacer una donación a Ángel Alcántar para ayudar en el desarrollo futuro de este complemento.
 ¿Quieres hacer una donación ahora? Para la transacción, serás redirigido al sitio web de PayPal.""")
         
