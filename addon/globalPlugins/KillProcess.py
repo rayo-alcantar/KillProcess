@@ -18,7 +18,10 @@ from scriptHandler import script
 import globalPluginHandler
 import os
 import appModuleHandler
+import addonHandler
 import subprocess
+
+addonHandler.initTranslation()
 
 # Definimos la clase Process
 class process:
