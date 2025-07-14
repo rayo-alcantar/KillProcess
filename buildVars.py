@@ -58,7 +58,10 @@ import os
 # pythonSources = ["addon/globalPlugins/*.py"]
 # For more information on SCons Glob expressions please take a look at:
 # https://scons.org/doc/production/HTML/scons-user/apd.html
-pythonSources = [os.path.join("addon", "globalPlugins", "*.py")]
+pythonSources = [
+    os.path.join("addon", "globalPlugins", "*.py"),
+    os.path.join("addon", "installTasks.py"),
+]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
