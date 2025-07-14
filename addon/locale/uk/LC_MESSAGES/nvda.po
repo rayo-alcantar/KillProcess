@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2025-07-14 13:48+0300\n"
-"PO-Revision-Date: 2025-07-14 13:53+0300\n"
+"POT-Creation-Date: 2025-07-14 17:52+0300\n"
+"PO-Revision-Date: 2025-07-14 18:05+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk_UA\n"
@@ -52,6 +52,26 @@ msgstr "Заблокованих процесів не знайдено"
 #: addon\globalPlugins\KillProcess.py:126
 msgid "{} se ha cerrado correctamente"
 msgstr "{} успішно закрито"
+
+#. Translators: The title of the dialog requesting donations from users.
+#: addon\installTasks.py:22
+msgid "Por favor, dona"
+msgstr "Будь ласка, зробіть пожертву"
+
+#. Translators: The text of the donate dialog
+#: addon\installTasks.py:25
+msgid ""
+"KillProcess - complemento gratuito para NVDA.\n"
+"Puedes hacer una donación a Ángel Alcántar para ayudar en el desarrollo "
+"futuro de este complemento.\n"
+"¿Quieres hacer una donación ahora? Para la transacción, serás redirigido al "
+"sitio web de PayPal."
+msgstr ""
+"KillProcess - безкоштовне доповнення для NVDA.\n"
+"Ви можете зробити пожертву Angel Alcantara, щоб допомогти в подальшому "
+"розвитку цього додатка.\n"
+"¿Хочете зробити пожертву зараз? Для здійснення транзакції ви будете "
+"перенаправлені на веб-сайт PayPal."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
