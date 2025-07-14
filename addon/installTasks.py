@@ -22,7 +22,7 @@ class donate:
         title = _("Por favor, dona")
         
         # Translators: The text of the donate dialog
-        message = _("""killprocess - complemento gratuito para NVDA.
+        message = _("""KillProcess - complemento gratuito para NVDA.
 Puedes hacer una donación a Ángel Alcántar para ayudar en el desarrollo futuro de este complemento.
 ¿Quieres hacer una donación ahora? Para la transacción, serás redirigido al sitio web de PayPal.""")
         
