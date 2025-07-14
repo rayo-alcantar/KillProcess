@@ -1,1 +1,2 @@
-﻿Se hacen cambios menores
+﻿Se hacen cambios menores gracias a @balaraz
+
