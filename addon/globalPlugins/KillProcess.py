@@ -23,6 +23,9 @@ import subprocess
 
 addonHandler.initTranslation()
 
+ADDON_NAME = _("Kill process")
+
+
 # Definimos la clase Process
 class process:
     # Inicializamos la clase con el ID del proceso del objeto que está actualmente enfocado
@@ -52,7 +55,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         # La combinación de teclas que dispara el script
         gesture="kb:windows+f4",
         # La categoría del script (para propósitos de organización)
-        category = _("Kill process")
+        category = ADDON_NAME
     )
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killProcess(self, gesture):  
@@ -82,7 +85,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         # La combinación de teclas que dispara el script
         gesture="kb:windows+control+f4",
         # La categoría del script (para propósitos de organización)
-        category = _("Kill process")
+        category = ADDON_NAME
     )
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killUnresponsiveProcesses(self, gesture):  
