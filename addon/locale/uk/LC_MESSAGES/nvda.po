@@ -3,51 +3,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-07-21 13:06+0300\n"
-"PO-Revision-Date: 2023-07-21 13:27+0300\n"
+"POT-Creation-Date: 2025-07-14 13:48+0300\n"
+"PO-Revision-Date: 2025-07-14 13:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ../../../..\n"
 "X-Poedit-SearchPath-0: buildVars.py\n"
 "X-Poedit-SearchPath-1: addon/globalPlugins/KillProcess.py\n"
 
-#: addon/globalPlugins/KillProcess.py:45
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: addon\globalPlugins\KillProcess.py:26 buildVars.py:23
+msgid "Kill Process"
+msgstr "Вбивця процесів"
+
+#. Descripción del comando del teclado que mata el proceso enfocado actualmente
+#: addon\globalPlugins\KillProcess.py:54
 msgid "Mata el proceso enfocado actualmente."
 msgstr "Завершує процес вікна у фокусі."
 
-#: addon/globalPlugins/KillProcess.py:56
+#. Notificamos al usuario que está enfocando un proceso restringido
+#: addon\globalPlugins\KillProcess.py:65
 msgid "Tiene enfocado un proceso restringido"
 msgstr "Фокусується на обмеженому процесі"
 
-#: addon/globalPlugins/KillProcess.py:66
+#. Notificamos al usuario que el proceso no pudo ser matado
+#: addon\globalPlugins\KillProcess.py:75
 msgid "No se puede matar el proceso actual"
 msgstr "Поточний процес не можна зупинити"
 
-#: buildVars.py:23
-msgid "Kill Process"
-msgstr "Kill Process"
-
-#: buildVars.py:26
-msgid "Complemento para matar el proceso de la ventana que tenga el foco."
-msgstr "Додаток для завершення процесу вікна, на якому встановлено фокус."
-
 #. Descripción del comando del teclado que mata los procesos bloqueados
-#: addon\globalPlugins\KillProcess.py:78
+#: addon\globalPlugins\KillProcess.py:84
 msgid "Mata los procesos bloqueados (aplicaciones que no responden)."
 msgstr "Знищує заблоковані процеси (програми, що не відповідають)."
 
-#. El comando no devolvió ningún proceso. Se informa al usuario y se termina
-#. el script.
-#: addon\globalPlugins\KillProcess.py:95
+#. El comando no devolvió ningún proceso. Se informa al usuario y se termina el script.
+#: addon\globalPlugins\KillProcess.py:101
 msgid "No se han encontrado procesos bloqueados"
 msgstr "Заблокованих процесів не знайдено"
 
 #. El proceso se ha cerrado correctamente
-#: addon\globalPlugins\KillProcess.py:120
+#: addon\globalPlugins\KillProcess.py:126
 msgid "{} se ha cerrado correctamente"
 msgstr "{} успішно закрито"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid "Complemento para matar el proceso de la ventana que tenga el foco."
+msgstr "Додаток для завершення процесу вікна, на якому встановлено фокус."
+
+#~ msgid "Kill process"
+#~ msgstr "Вбити процес"
