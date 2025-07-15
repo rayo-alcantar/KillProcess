@@ -23,7 +23,7 @@ import subprocess
 
 addonHandler.initTranslation()
 
-ADDON_NAME = _("Kill Process")
+ADDON_NAME = addonHandler.getCodeAddon().manifest['summary']
 
 
 # Definimos la clase Process
