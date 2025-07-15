@@ -24,8 +24,6 @@ from scriptHandler import script
 
 addonHandler.initTranslation()
 
-ADDON_NAME = addonHandler.getCodeAddon().manifest['summary']
-
 
 # Definimos la clase Process
 class process:
@@ -49,14 +47,14 @@ class process:
 
 # Definimos la clase del complemento global
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+    # La categoría del script (para propósitos de organización)
+    scriptCategory = addonHandler.getCodeAddon().manifest['summary']
     # Definimos un script que mata el proceso enfocado actualmente cuando se presiona la combinación de teclas 'Windows + F4'
     @script(
         # Descripción del comando del teclado que mata el proceso enfocado actualmente
         description=_("Mata el proceso enfocado actualmente."),
         # La combinación de teclas que dispara el script
         gesture="kb:windows+f4",
-        # La categoría del script (para propósitos de organización)
-        category = ADDON_NAME
     )
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killProcess(self, gesture):  
@@ -85,8 +83,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         description=_("Mata los procesos bloqueados (aplicaciones que no responden)."),
         # La combinación de teclas que dispara el script
         gesture="kb:windows+control+f4",
-        # La categoría del script (para propósitos de organización)
-        category = ADDON_NAME
     )
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killUnresponsiveProcesses(self, gesture):  
