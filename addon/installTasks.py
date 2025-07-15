@@ -1,5 +1,4 @@
-﻿# -*- coding: utf-8 -*-
-# killProcess es un coplemento para matar la ventana que tenga el foco.
+﻿# killProcess es un coplemento para matar la ventana que tenga el foco.
 # Este archivo está cubierto por la Licencia Pública General de GNU.
 # Consulta el archivo COPYING para más detalles.
 # Última actualización 2025
