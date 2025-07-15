@@ -4,19 +4,22 @@
 # Última actualización 2025
 # Derechos de autor (C) 2024 Ángel Alcántar <rayoalcantar@gmail.com>
 
+import webbrowser
+
+import wx
+import gui
+import globalVars
 import addonHandler
+
 addonHandler.initTranslation()
+
 
 class donate:
     def open():
-        import webbrowser
         # Directamente abrir la página de PayPal sin especificar el idioma.
         webbrowser.open("https://www.paypal.com/paypalme/rayoalcantar")
 
     def request():
-        import wx
-        import gui
-        
         # Translators: The title of the dialog requesting donations from users.
         title = _("Por favor, dona")
         
@@ -32,6 +35,5 @@ Puedes hacer una donación a Ángel Alcántar para ayudar en el desarrollo futur
         return False
 
 def onInstall():
-    import globalVars
     if not globalVars.appArgs.secure:
         donate.request()
