@@ -10,16 +10,18 @@ Código original del compelmento de Oriol Gómez.
 """
 
 # Importamos los módulos requeridos
-import api
-import winKernel
-import ui
-import tones
-from scriptHandler import script
-import globalPluginHandler
 import os
+import subprocess
+
+import ui
+import api
+import tones
+import winKernel
+import globalPluginHandler
 import appModuleHandler
 import addonHandler
-import subprocess
+from scriptHandler import script
+
 
 addonHandler.initTranslation()
 
