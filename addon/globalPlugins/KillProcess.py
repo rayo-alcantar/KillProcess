@@ -10,7 +10,6 @@ Código original del compelmento de Oriol Gómez.
 """
 
 # Importamos los módulos requeridos
-import os
 import subprocess
 
 import ui
@@ -92,7 +91,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killUnresponsiveProcesses(self, gesture):  
         # Ejecutamos el comando tasklist del sistema operativo
-        unresponsiveProcesses = os.popen(r'tasklist /fi "STATUS eq not responding" /fo csv /nh').readlines()
+        unresponsiveProcesses = subprocess.check_output(['tasklist','/fi','STATUS eq not responding','/fo','csv','/nh'], text=True).split('\r\n')
         # Para cada proceso encontrado
         for p in unresponsiveProcesses:
             try:
