@@ -10,20 +10,19 @@ Código original del compelmento de Oriol Gómez.
 """
 
 # Importamos los módulos requeridos
-import api
-import winKernel
-import ui
-import tones
-from scriptHandler import script
-import globalPluginHandler
-import os
-import appModuleHandler
-import addonHandler
 import subprocess
 
-addonHandler.initTranslation()
+import ui
+import api
+import tones
+import winKernel
+import globalPluginHandler
+import appModuleHandler
+import addonHandler
+from scriptHandler import script
 
-ADDON_NAME = _("Kill Process")
+
+addonHandler.initTranslation()
 
 
 # Definimos la clase Process
@@ -48,14 +47,14 @@ class process:
 
 # Definimos la clase del complemento global
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+    # La categoría del script (para propósitos de organización)
+    scriptCategory = addonHandler.getCodeAddon().manifest['summary']
     # Definimos un script que mata el proceso enfocado actualmente cuando se presiona la combinación de teclas 'Windows + F4'
     @script(
         # Descripción del comando del teclado que mata el proceso enfocado actualmente
         description=_("Mata el proceso enfocado actualmente."),
         # La combinación de teclas que dispara el script
         gesture="kb:windows+f4",
-        # La categoría del script (para propósitos de organización)
-        category = ADDON_NAME
     )
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killProcess(self, gesture):  
@@ -84,13 +83,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         description=_("Mata los procesos bloqueados (aplicaciones que no responden)."),
         # La combinación de teclas que dispara el script
         gesture="kb:windows+control+f4",
-        # La categoría del script (para propósitos de organización)
-        category = ADDON_NAME
     )
     # El método que se llama cuando se presiona la combinación de teclas
     def script_killUnresponsiveProcesses(self, gesture):  
         # Ejecutamos el comando tasklist del sistema operativo
-        unresponsiveProcesses = os.popen(r'tasklist /fi "STATUS eq not responding" /fo csv /nh').readlines()
+        unresponsiveProcesses = subprocess.check_output(['tasklist','/fi','STATUS eq not responding','/fo','csv','/nh'], text=True).split('\r\n')
         # Para cada proceso encontrado
         for p in unresponsiveProcesses:
             try:
