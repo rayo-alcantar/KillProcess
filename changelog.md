@@ -1,2 +1,2 @@
-﻿Se hacen cambios menores gracias a @balaraz
+﻿Se mejora el código gracias a @balaraz
 
